@@ -1,0 +1,470 @@
+@import 'variables';
+
+@font-face{
+  font-family: 'poppins';
+  src: url(../resources/fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face{
+  font-family: 'Saira Stencil One';
+  src: url(../resources/fonts/Saira_Stencil_One/SairaStencilOne-Regular.ttf);
+} 
+/*Body, Menú de Navegación y Pie de Página*/
+body {
+  background-color: $background-color-body;
+  padding: 0;
+  margin: 96.66px 0 0 0;
+  font-family: $main-font;
+}
+.menu-header{
+  background-color: $background-color-menu;
+  height: 96.66px;
+  padding-top: 10px;
+  position: fixed;
+  top: 0;
+  transition: height .3s ease, padding-top .3s ease;
+  width: 100%;
+  z-index: 10;
+  nav {
+      background-color: $background-color-menu;
+      ul li{
+          height: 57px;
+          list-style: none;
+          a{
+             color: $color-text-base;
+             display: block;
+             font-size: 1.119rem;
+             margin: 0 5px;
+             padding: 12px 10px;
+             text-decoration: none;
+             transition: color 0.5s, border-bottom 0.2s;
+          }
+          a:hover{
+              border-bottom: 3px solid $color-text-base;
+              color:$color-text-menu-link-hoverandactive;
+          }
+          #active-link{
+          color:$color-text-menu-link-hoverandactive;
+          border-bottom: 3px solid $color-text-base;
+          }
+      }
+  }
+  i{color:$color-text-base;}
+}
+.menu-header-sticky{
+  height: 76.66px;
+  padding-top: 0px;
+  transition: all .5s ease;
+  z-index:10;
+}
+
+
+.pie-de-pagina {
+  background-color: $background-color-footer;
+  margin: 0;
+  margin-top: 20px;
+  padding: 30px 0;
+  
+  h3{
+      font-size: 1.562rem;
+      margin: 0;
+      padding: 0 7px;
+      border-left: 3px solid #363636;
+      border-right: 3px solid #363636;
+      border-radius: 8px;
+  }
+  .nosotros{width: 40%;}
+  
+  ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      a{
+          color: $color-text-footer-link;
+          font-size: 1.25rem;
+          text-decoration: none;
+      }
+      a:hover{color: $color-text-footer-link-hover;}
+      i {margin-right: 5px;}
+  }
+}
+
+
+.go-top-container{
+  display: none;
+  bottom: 2%;
+  height: 3rem;
+  left: 93%;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: 3rem;
+  z-index: -1;
+  .go-top-button{
+      cursor:pointer;
+      background-color: $background-color-go-top;
+      border-radius: 50%;
+      left: 50%;
+      height: 100%;
+      top: 50%;
+      transition: .2;
+      width: 100%;
+      z-index: -1;
+      i{
+          color: $black-ponele;
+          font-size: 3rem;
+          left: 50%;
+          position: absolute;
+          top: 48%;
+          transform: translate(-50%, -50%) scale(0);
+          transition: .2s;
+      }
+  }
+}
+
+.show{
+  z-index: 10;
+  display: inline-block;
+  .go-top-button{
+      animation: popup .3s ease-in-out;
+      height: 3rem;
+      width: 3rem;
+      z-index: 11;
+      display: inline-block;
+      i{
+          transform: translate(-50%, -50%) scale(1); 
+      } 
+  }
+}
+@media (max-width: 768px) {
+  .go-top-container{
+      left:85%;
+  }
+}
+@keyframes popup{
+  0%{
+      height: 0;
+      width: 0;
+  }
+  50%{
+      height: 5rem;
+      width: 5rem;
+  }
+  100%{
+      height: 3rem;
+      width: 3rem;
+  }
+}
+
+/* index.html, info_salud.html, por_que_bastard, nosotros.html y parte de contacto.html*/
+
+.portada{
+  max-height: 600px;
+  overflow: hidden;
+  .portada-titulo{
+      animation-duration: 2s;
+      animation-name: portada-titulo;
+      background-color: $background-color-portada-titulo;
+      color: $color-text-base;
+      display: inline-block;
+      font-family: $main-font-tittle;
+      font-size: calc(2rem + 2vw);
+      letter-spacing: 2px;
+      margin: 0;
+      transform: translate(10px, -520px);
+      width: auto;
+  }
+  .portada-titulo.nosotros-tit{
+      transform: translate(400px, -320px);
+      font-size: calc(3rem + 2vw);
+  }
+  @keyframes portada-titulo {
+      0% { opacity: 0;}
+      100% {opacity: 1;}
+  }
+  .portada-img{
+      height: 600px;
+      overflow: hidden;
+      width: 100%;
+  }
+}
+
+
+.seccion-texto{
+  color: $color-text-base;
+  text-align: center;
+  width: 330px;
+  h2{
+      font-size: 1.5rem;
+      font-weight: bold;}
+  p{ 
+      color: $color-text-base-p;
+      font-size: 1rem;
+      margin-top: 25px;
+  }
+}
+
+/*index.html y sección final de la mayoríad de views*/
+
+.main-section {
+  div{margin: 20px 0;}
+}
+.principal{
+  span{
+      a{
+          font-style: italic;
+          color:$color-text-main-span;
+      }
+      a:hover{ 
+          color: $color-text-main-span-hover;
+          text-decoration: none;
+      }
+  }    
+}    
+
+.carousel-end{
+  max-width: 400px;
+}
+
+.btn-orange {
+  margin-top: 20px;
+  color: $black-ponele;
+  background-color: $color-text-base;
+  border-color: $color-text-base;
+}
+.btn-orange:hover{
+  background-color: $background-color-button-orange-hover;
+  border-color: $background-color-button-orange-hover;
+}
+/* productos.html*/
+.advertencia-productos{
+  background-color: $background-color-advertencia-productos;
+  color: $color-text-base;
+  font-size: 1.525rem;
+  padding: 0 30px;
+  p{font-size: 1.125rem;}
+  h1{margin:0;}
+}
+
+.odio-grid{ /*cabe aclarar que le voy a cambiar el nombre a futuro jajajaja update: sigo odiando grid. me niego a cambiarle el nombre, aguante flexbox. update2: qué horrible que es esto man, me está agarrando un acv odio las grillas update3: me harté, por hoy, al final usé propiedades de flexbox, no puedo con las grillas*/
+  background-color: $background-color-footer;
+  div{
+      border: 1px solid black;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 15px 0;
+      padding: 15px 0 0 0;
+      a{
+          background-color: $background-color-advertencia-productos;
+          color: $color-text-base;
+          font-size: 1.325rem;
+          padding: 10px 0;
+          text-align:center;
+          text-decoration:none;
+      }
+      a:hover{
+          background-color: $black-ponele;
+          color: white;
+      }
+      div{
+          border: 0;
+          h2, p{
+              font-size: 1.325rem;
+              margin: 10px 0;
+              padding: 0;
+              text-align:center;
+          }
+      }
+  }
+  i{padding-right: 8px;}
+}
+
+
+.info-salud-content {
+  margin: 40px auto;
+  .seccion-texto{
+      margin-top: 25px;
+      text-align: justify;
+  }
+}
+
+
+.info-salud-end-container{
+  margin: 40px auto;
+  .seccion-texto{
+      margin: 0 20px;
+      width:60%;
+      
+  }
+}
+@media (max-width: 992px) {
+  .info-salud-end-container .seccion-texto{
+      margin: 0 20px;
+      margin-top: 40px;
+      width: 90%;
+  }
+}
+
+/* por_que_bastard.html*/
+.por-que-bastard-main{
+  margin: 90px auto;
+  .por-que-bastard-img{
+      animation-name: por-que-bastard-img;
+      animation-duration: 18s;
+      animation-iteration-count: infinite;
+      background-image: url("../resources/images/veo-que-hago.jpg");
+      background-position: 60% 40%;
+      height:1000px;
+      overflow: hidden;
+      width: 50%;
+  }
+  @keyframes por-que-bastard-img{
+      0%{background-position: 60% 35%;
+      }
+      50%{background-position: 40% 50%;
+      }
+      100%{background-position: 60% 35%;}
+  }
+  .seccion-texto{
+      margin: 60px 0;
+      h2{background-color: $background-color-por-que-bastard-section-nosotros-tittle;
+      font-size: 1.3rem}
+      p{font-size: 1rem;}
+  }
+}
+
+/* nosotros.html*/
+
+.nosotros-main {
+  .nosotros-carousel{
+      margin: 35px 0;
+      .seccion-texto.nosotros {
+          background-color: $background-color-footer;
+          border: 1px #212529 solid;
+          border-radius: 25px;
+          padding: 15px;
+          text-align: center;
+          h2{color: $black-ponele;}
+          p{color:$color-text-footer-link}
+      }
+  }
+  .seccion-end-nosotros{
+      .seccion-texto{
+          height: auto;
+          width: 60%;
+      }
+  }
+}
+@media (max-width: 768px) {
+  .nosotros-main{
+      .seccion-end-nosotros{
+          .seccion-texto{
+              width:90%;
+          }
+      }
+  }
+}
+/*contacto.html*/ /*Te odio formulario*/
+
+.formulario {
+  background-color: $background-color-footer;
+  margin-bottom: 35px;
+  label{display:none;}
+  input{
+      display: block;
+      font-size: 1.125rem;
+      padding: 10px;
+      margin: 5px 0;
+      width: auto;
+  }
+  .formulario-seleccion{
+      select{
+          display: inline-block;
+          margin: 20px 0;
+      }
+      input {
+          display: inline-block;
+          width: auto;
+      }
+  }
+  .formulario-mensajeynewsletter{
+      textarea{
+          display:block; 
+          font-family: 'poppins', sans-serif;
+          width: 70%;
+      }
+      input{
+          display:inline-block;
+          width: auto;
+      }
+  } 
+  .formulario-botones{
+      input{
+          background-color:$background-color-form-button;
+          border: 2px solid $black-ponele;
+          border-radius: 17px;
+          color: $color-form-button;
+          display:inline-block;
+          font-family: 'poppins', sans-serif;
+          font-size: 1.175rem;
+          margin-top: 10px;
+          padding: 5px;
+          width: auto;
+      }
+      input:hover{
+          background-color:$background-color-form-button-hover;
+          color: $color-form-button-hover;
+      }
+  }
+}
+
+/*gracias.html*/
+
+.seccion-gracias{
+  background-color: $background-color-footer;
+  margin: 80px auto;
+  margin-top: 140px;
+  padding: 20px 10px;
+  .seccion-gracias-texto-sec{
+      h2{
+      font-size: 1.525rem;
+      margin: 30px 0;
+      padding: 0 10px;
+      } 
+      a{
+          color: $color-section-gracias;
+          font-size: 1.525rem;
+          padding: 0 10px;
+          text-decoration: none;
+      }
+      a:hover{
+          border-bottom: 3px solid #0f030e;
+          color: $color-section-gracias-hover;
+      }
+  }
+}
+
+$height: 48px;
+$width: 120px;
+$height-hover: $height*6.5;
+
+#futuro-popup{
+  background-color: $background-color-footer;
+  font-size: 0.946rem;
+  height: $height;
+  margin:0;
+  overflow: hidden;
+  padding: 0 10px;
+  transform: translate(0, 50px);
+  transition: all 1s;
+  width: $width;
+}
+#futuro-popup:hover{
+  height: $height-hover;
+  padding: 0 20px;
+  width: $width*10.8;
+}
+
+ 
+#futuro-popup-p-principal{
+  display:if( $height-hover > 50px, none, block)
+}

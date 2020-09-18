@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Panadería Bastard</title>
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <link rel="stylesheet" href="./css/bootstrap-reboot.css">
+        <link rel="stylesheet" href="./css/font-awesome.css">
+        <link rel="stylesheet" href="./css/animate.css">
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="menu-header">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg justify-content-lg-around">
+                        <a href="index.html">
+                            <img src="./resources/images/bastpng-300x91.png" alt="LOGO" width="200px">
+                        </a>
+                        <button class="navbar-toggler" data-target="#menu" data-toggle="collapse" type="button">
+                            <span><i class="fa fa-bars"></i></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="menu">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active"><a href="views/productos.html">Productos</a></li>
+                                <li class="nav-item active"><a href="views/info_salud.html">Info Salud</a></li>
+                                <li class="nav-item active"><a href="views/por_que_bastard.html">¿Por qué Bastard?</a></li>
+                                <li class="nav-item active"><a href="views/nosotros.html">Nosotros</a></li>
+                                <li class="nav-item active"><a href="views/contacto.html">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="portada">
+                <div class="portada-img">
+                    <img src="./resources/images/imagen-portada.png" alt="imagen-portada" width="100%" height="107%">
+                </div>
+                <h1 class="portada-titulo">¿Cansado del pan industrial?<br>Probá Bastard, un pan de verdad.</h1>
+            </div>
+        </header>
+        <main class="principal">
+            <div id="futuro-popup">
+                <div id="futuro-popup-p-principal">
+                    <p>Hola, poné el mouse acá.</p>
+                </div>
+                <p id="futuro-popup-p-secundario">Hola. Soy un texto que va a medir 1 píxel y con animaciones va a ser más grande y legible (espero) [Update: después de 2 horas no me salió lo que quería hacer, me rindo {por ahora}]. La idea de esta web no es mía, obviamente, es de una página que se llama <a href="https://bastard.store" target="_blank">Bastard</a> y soy muy fan de esta panadería por la gente que lo maneja desde atrás, siento que fueron mis motivadores natos para empezar a cambiar mi vida y meterme a algo que me gusta, o sea, este mundo de la programación (aunque ahora estemos en la parte del maquetado y no en la programación en sí). Estoy hace más de un año en un local de comida rápida y nunca me sentí tan estancado en mi vida como en este año, si bien aprendí muchísimas cosas y tuve un desarrollo emocional y personal bastante grande sentía que podía ir a por más, a por mucho más, y acá estoy, intentando cambiar. Este sitio lo estoy haciendo porque una muy buena amiga mía en la clase 1 me dijo: "hacé algo de lo que sepas y te guste" y acá estoy, haciendo el sitio de una empresa que no me conoce jajaja por ahora (?) al principio del curso esta empresa no tenía una página oficial así que me sirvió mucho para idear bien el diseño a mi manera y cómo lo presentaría yo, y a lo largo de las semanas salió el sitio oficial, que es el que dejé en el link, y de ahí robé todas las imágenes, colores y algún que otro diseño de estructuración para que se asemeje más a lo que el diseñador querría, pero bueno, no sé cómo quedará este sitio al final del curso, espero que con resultados que me agraden y espero aprender a crear un popup así no tengo que andar metiendo una p que va a tener un píxel de espacio y que vaya dando vueltas por la pantalla como seguramente lo vaya a hacer jajaja ya veo que ni siquiera le voy a poder asignar un píxel de espacio y escribí todo esto al pedo, pero no importa, cómo dice uno de los chicos que maneja la empresa "equivocarse es parte, puto"  </p>
+            </div>
+            <div class="container main-section">
+                <div class="d-flex flex-column align-items-center justify-content-lg-around align-items-lg-center flex-lg-row wow animate__animated animate__bounceInUp">
+                    <div>
+                        <img class="img-fluid" src="http://via.placeholder.com/500x300?text=Producto" alt="producto">
+                    </div>
+                    <div class="seccion-texto">
+                        <h2>Creamos los mejores productos saludables para tu felicidad</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sunt ea quia esse non doloribus suscipit? Dolor quia ducimus, quos eveniet blanditiis commodi ad, id dolores nesciunt, illo recusandae ipsam.</p>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-column align-items-center justify-content-lg-around align-items-lg-center flex-lg-row-reverse wow animate__animated animate__backInLeft">
+                    <div>
+                        <img class="img-fluid" src="http://via.placeholder.com/500x300?text=Masa Madre" alt="masa madre">
+                    </div>
+                    <div class="seccion-texto">
+                        <h2>Fermentaciones hechas con <span><a href="views/info_salud.html">MASA MADRE</a></span></h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sapiente eveniet nihil modi, ipsa asperiores maiores voluptatum obcaecati animi necessitatibus! Quam voluptatibus maxime non accusantium ipsa aliquid earum voluptas eveniet?</p>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-column align-items-center justify-content-lg-around align-items-lg-center flex-lg-row wow animate__animated animate__bounceInRight">
+                    <div>
+                        <video class="img-fluid" autoplay loop width="500px" height="300px">
+                            <source src="./resources/videos/video-bastard.mp4" type="video/mp4">
+                        </video> <!--por lo visto en clase acá pondría un iFrame en lugar de un <video> pero no tengo un vídeo en yt así que por ahora utilizaré esta etiqueta-->
+                    </div>
+                    <div class="seccion-texto">
+                        <h2>Contamos con un equipo de alta calidad</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum inventore maxime commodi sequi nam, quia quo laboriosam nostrum provident vel hic, eum maiores, unde incidunt nihil? Vel accusamus perferendis aut?</p>
+                    </div>
+                </div>
+                
+                <div class="d-flex flex-column align-items-center justify-content-lg-around align-items-lg-center flex-lg-row-reverse wow animate__animated animate__zoomIn">
+                    <div>
+                        <img class="img-fluid" src="http://via.placeholder.com/500x300?text=Envio" alt="envio">
+                    </div>
+                    <div class="seccion-texto">
+                        <h2>¡Te lo llevamos a la puerta de tu casa!</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam velit suscipit numquam quaerat deserunt, delectus ea. Amet nisi unde numquam odit nihil tenetur placeat ratione sed pariatur. Nisi, iste optio!</p>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="container carousel-end">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                        <img class="d-block w-100" src="./resources/images/black-box.jpg" width="300px" height="auto" data-src="holder.js/300x100?theme=social" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                        <img class="d-block w-100" src="./resources/images/white-box.jpg" width="300px" height="auto" data-src="holder.js/300x100?theme=industrial" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                        <img class="d-block w-100" src="./resources/images/bread-box.jpeg" width="300px" height="auto" data-src="holder.js/300x100?theme=industrial" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                        <img class="d-block w-100" src="./resources/images/blue-box.jpg" width="300px" height="auto" data-src="holder.js/300x100?theme=industrial" alt="4th slide">
+                        </div>
+                        <div class="carousel-item">
+                        <img class="d-block w-100" src="./resources/images/pizza-box.jpeg" width="300px" height="auto" data-src="holder.js/300x100?theme=industrial" alt="5th slide">
+                        </div>
+                        <div class="carousel-item">
+                        <img class="d-block w-100" src="./resources/images/cuestom-box.jpeg" width="300px" height="auto" data-src="holder.js/300x100?theme=industrial" alt="6th slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="./views/productos.html" class="btn-orange btn">Comprar productos</a>
+            </div>
+        </main>
+        <footer class="pie-de-pagina wow animate__animated animate__slideInUp">
+            <div class="container">
+                <nav class="d-flex justify-content-around">
+                    <div class="d-none d-lg-block">
+                        <h3>Productos</h3>
+                            <ul>
+                                <li><a href="views/productos.html">White Box</a></li>
+                                <li><a href="views/productos.html">Black Box</a></li>
+                                <li><a href="views/productos.html">Blue Box</a></li>
+                                <li><a href="views/productos.html">Bread Box</a></li>
+                            </ul>
+                    </div>
+                    <div class="d-none d-md-block">
+                        <h3 class="nosotros">Nosotros</h3>
+                        <ul>
+                            <li><a href="views/nosotros.html">Equipo</a></li>
+                            <li><a href="views/contacto.html">Empresas</a></li>
+                            <li><a href="views/contacto.html">¿Querés trabajar con nosotros?</a></li>
+                            <li><a href="views/contacto.html">¿Querés ser nuestro proveedor?</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Contacto</h3>
+                            <ul>
+                                <li><a href="https://www.instagram.com/bastard.pandeverdad/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</a></li>
+                                <li><a href="https://wa.me/5491156327705" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i>Whatsapp</a></li>
+                                <li><a href="https://www.linkedin.com/company/bastardpan" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i>LinkedIn</a></li>
+                            </ul>
+                    </div>
+                </nav>
+            </div>
+        </footer>
+        <div class="go-top-container">
+            <div class="go-top-button">
+               <i class="fa fa-arrow-up" aria-hidden="true"></i>
+            </div>
+        </div>
+        <script src="./js/jquery-3.5.1.slim.min.js"></script>
+        <script src="./js/popper.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/main.js"></script>
+        <script src="./js/wow.js"></script>
+        <script src="./js/owl.carousel.min.js"></script>
+        <script>new WOW().init();</script>
+    </body>
+</html>

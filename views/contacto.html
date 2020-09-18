@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contacto - Bastard</title>
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="../css/bootstrap-reboot.css">
+        <link rel="stylesheet" href="../css/font-awesome.css">
+        <link rel="stylesheet" href="../css/animate.css">
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="menu-header">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg justify-content-lg-around">
+                        <a href="../index.html">
+                            <img src="../resources/images/bastpng-300x91.png" alt="LOGO" width="200px">
+                        </a>
+                        <button class="navbar-toggler" data-target="#menu" data-toggle="collapse" type="button">
+                            <span><i class="fa fa-bars"></i></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="menu">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active"><a href="./productos.html">Productos</a></li>
+                                <li class="nav-item active"><a href="./info_salud.html">Info Salud</a></li>
+                                <li class="nav-item active"><a href="./por_que_bastard.html">¿Por qué Bastard?</a></li>
+                                <li class="nav-item active"><a href="./nosotros.html">Nosotros</a></li>
+                                <li class="nav-item active"><a id="active-link" href="./contacto.html">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="formulario">
+                <div class="container">
+                    <form action="gracias.html" method="POST" enctype="multipart/form-data">
+                        <fieldset>
+                            <legend>¡Contáctanos!</legend>
+                                <div class="formulario-datos-basicos">
+                                    <label for="nombre">Tu nombre:</label>
+                                    <input required type="text" name="nombre" placeholder="Tu Nombre. Ej: Pepe">
+                                    <label for="apellido">Tu apellido:</label>
+                                    <input required type="text" name="apellido" placeholder="Tu Apellido. Ej: Quiroga">
+                                    <label for="email"> Tu email:</label>
+                                    <input required type="email" name="email" placeholder="Tu Email. Ej: pepequiroga@hotmail.com">
+                                </div>
+                    
+                                <div class="formulario-seleccion">
+                                    <label for="asunto">Seleccione el asunto</label>
+                                    <select name="asunto">
+                                        <option selected="selected">Seleccione, por favor</option>
+                                        <option value="1">Quiero trabajar con ustedes</option>
+                                        <option value="2">Quiero ser su proveedor</option>
+                                        <option value="3">Soy empresa</option>
+                                        <option value="4">Otros</option>
+                                    </select>
+                                    <label for="archivo">Seleccione su archivo</label>
+                                    <input type="file" name="archivo">
+                                </div>
+                    
+                                <div class="formulario-mensajeynewsletter">
+                                    <label for="mensaje">Inserte su mensaje</label>
+                                    <textarea required name="mensaje" cols="60" rows="8" placeholder="Mensaje..."></textarea>
+                                    <input type="checkbox" name="acepto" value="acepto" checked>Acepto recibir en mi casilla de correo información y novedades acerca de Panadería Bastard
+                                </div>
+                    
+                                <div class="formulario-botones">
+                                    <input type="submit" name="bottom" value="ENVIAR">
+                                    <input type="reset" value="Borrar datos">
+                                </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer class="pie-de-pagina wow animate__animated animate__slideInUp">
+            <div class="container">
+                <nav class="d-flex justify-content-around">
+                    <div class="d-none d-lg-block">
+                        <h3>Productos</h3>
+                            <ul>
+                                <li><a href="./productos.html">White Box</a></li>
+                                <li><a href="./productos.html">Black Box</a></li>
+                                <li><a href="./productos.html">Blue Box</a></li>
+                                <li><a href="./productos.html">Bread Box</a></li>
+                            </ul>
+                    </div>
+                    <div class="d-none d-md-block">
+                        <h3 class="nosotros">Nosotros</h3>
+                        <ul>
+                            <li><a href="./nosotros.html">Equipo</a></li>
+                            <li><a href="./contacto.html">Empresas</a></li>
+                            <li><a href="./contacto.html">¿Querés trabajar con nosotros?</a></li>
+                            <li><a href="./contacto.html">¿Querés ser nuestro proveedor?</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Contacto</h3>
+                            <ul>
+                                <li><a href="https://www.instagram.com/bastard.pandeverdad/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</a></li>
+                                <li><a href="https://wa.me/5491156327705" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i>Whatsapp</a></li>
+                                <li><a href="https://www.linkedin.com/company/bastardpan" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i>LinkedIn</a></li>
+                            </ul>
+                    </div>
+                </nav>
+            </div>
+        </footer>
+        <div class="go-top-container">
+            <div class="go-top-button">
+               <i class="fa fa-arrow-up" aria-hidden="true"></i>
+            </div>
+        </div>
+        <script src="../js/jquery-3.5.1.slim.min.js"></script>
+        <script src="../js/popper.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../js/wow.js"></script>
+        <script src="../js/owl.carousel.min.js"></script>
+        <script>new WOW().init();</script>
+    </body>
+</html>
