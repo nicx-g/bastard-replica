@@ -464,7 +464,6 @@ $height-hover: $height*6.5;
   width: $width*10.8;
 }
 
- 
-#futuro-popup-p-principal{
-  display:if( $height-hover > 50px, none, block)
-}
+ #futuro-popup-p-principal{
+   display:if($height > 50px, none, block)
+ }
