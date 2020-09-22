@@ -8,7 +8,7 @@ $font-size-base: 16px !default;
 /* Colors */
 
 /*color text */
-$black-ponele: #212529;
+$black-ponele: #333333;
 $color-text-base: #fda05e;
 $color-text-base-p: #fdb079;
 $color-text-menu-link-hoverandactive: #cc7742;
@@ -16,8 +16,6 @@ $color-text-main-span: #ffbb8b;
 $color-text-main-span-hover: #f6e6b2;
 $color-text-footer-link: #452b11;
 $color-text-footer-link-hover: #bd7b52;
-$color-form-button: #cc7741;
-$color-form-button-hover: #cc6220;
 $color-section-gracias: #2f152c;
 $color-section-gracias-hover: #110910;
 
@@ -31,6 +29,44 @@ $background-color-portada-titulo: #00000069;
 $background-color-button-orange-hover: #b47040;
 $background-color-advertencia-productos: #4c364a;
 $background-color-por-que-bastard-section-nosotros-tittle: #271124;
-$background-color-form-button: #3a1536;
-$background-color-form-button-hover: #140713;
 
+//LISTAS
+
+
+//MIXINS Y FUNCIONES
+
+@mixin b-button {
+    border: 0;
+    border-radius: 10px;
+    display:inline-block;
+    font-family: 'poppins', sans-serif;
+    font-size: 1.175rem;
+    margin-top: 10px;
+    padding: 10px;
+    text-decoration: none;
+    transition: all .3s;
+    width: auto;
+}
+@mixin b-button-purple{
+    background-color:$background-color-menu;
+    color: $color-text-base;
+    @include b-button;
+}
+@function b-button-opacity($color, $opacidad){
+    @return rgba($color, $opacidad);
+}
+
+
+// CLASES PRE-ARMADAS
+.b-button{
+    @include b-button;
+}
+.b-button-purple{
+    @include b-button-purple;
+    border: 2px solid b-button-opacity($color-text-base,.50);
+}
+.b-button-purple:hover{
+    color:$color-text-menu-link-hoverandactive;
+    border: 2px solid b-button-opacity($color-text-base,1);
+    text-decoration: none;
+}

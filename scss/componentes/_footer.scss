@@ -1,0 +1,31 @@
+.pie-de-pagina {
+    background-color: $background-color-footer;
+    margin: 0;
+    margin-top: 20px;
+    padding: 30px 0;
+    
+    h3{
+        font-size: 1.562rem;
+        margin: 0;
+        padding: 0 7px;
+        border-left: 3px solid #363636;
+        border-right: 3px solid #363636;
+        border-radius: 8px;
+    }
+    .nosotros{width: 40%;}
+    
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        a{
+            color: $color-text-footer-link;
+            font-size: 1.25rem;
+            text-decoration: none;
+        }
+        a:hover{color: $color-text-footer-link-hover;}
+        i {margin-right: 5px;}
+    }
+  }
+  
+  

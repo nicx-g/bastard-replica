@@ -13,78 +13,6 @@ body {
   margin: 96.66px 0 0 0;
   font-family: $main-font;
 }
-.menu-header{
-  background-color: $background-color-menu;
-  height: 96.66px;
-  padding-top: 10px;
-  position: fixed;
-  top: 0;
-  transition: height .3s ease, padding-top .3s ease;
-  width: 100%;
-  z-index: 10;
-  nav {
-      background-color: $background-color-menu;
-      ul li{
-          height: 57px;
-          list-style: none;
-          a{
-             color: $color-text-base;
-             display: block;
-             font-size: 1.119rem;
-             margin: 0 5px;
-             padding: 12px 10px;
-             text-decoration: none;
-             transition: color 0.5s, border-bottom 0.2s;
-          }
-          a:hover{
-              border-bottom: 3px solid $color-text-base;
-              color:$color-text-menu-link-hoverandactive;
-          }
-          #active-link{
-          color:$color-text-menu-link-hoverandactive;
-          border-bottom: 3px solid $color-text-base;
-          }
-      }
-  }
-  i{color:$color-text-base;}
-}
-.menu-header-sticky{
-  height: 76.66px;
-  padding-top: 0px;
-  transition: all .5s ease;
-  z-index:10;
-}
-
-
-.pie-de-pagina {
-  background-color: $background-color-footer;
-  margin: 0;
-  margin-top: 20px;
-  padding: 30px 0;
-  
-  h3{
-      font-size: 1.562rem;
-      margin: 0;
-      padding: 0 7px;
-      border-left: 3px solid #363636;
-      border-right: 3px solid #363636;
-      border-radius: 8px;
-  }
-  .nosotros{width: 40%;}
-  
-  ul{
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      a{
-          color: $color-text-footer-link;
-          font-size: 1.25rem;
-          text-decoration: none;
-      }
-      a:hover{color: $color-text-footer-link-hover;}
-      i {margin-right: 5px;}
-  }
-}
 
 
 .go-top-container{
@@ -153,7 +81,7 @@ body {
   }
 }
 
-/* index.html, info_salud.html, por_que_bastard, nosotros.html y parte de contacto.html*/
+/* index.html, info_salud.html, por_que_bastard, nosotros.html*/
 
 .portada{
   max-height: 600px;
@@ -397,20 +325,11 @@ body {
   } 
   .formulario-botones{
       input{
-          background-color:$background-color-form-button;
-          border: 2px solid $black-ponele;
-          border-radius: 17px;
-          color: $color-form-button;
-          display:inline-block;
-          font-family: 'poppins', sans-serif;
-          font-size: 1.175rem;
-          margin-top: 10px;
-          padding: 5px;
-          width: auto;
+        @include b-button-purple;      
       }
       input:hover{
-          background-color:$background-color-form-button-hover;
-          color: $color-form-button-hover;
+          color:$color-text-menu-link-hoverandactive;
+          padding: 15px;
       }
   }
 }
