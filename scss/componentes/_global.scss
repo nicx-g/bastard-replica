@@ -147,20 +147,16 @@ body {
   }    
 }    
 
+.contador-item{
+  height: 300px;
+  background-color: $background-color-menu;
+  width: 100%;
+}
+
 .carousel-end{
   max-width: 400px;
 }
 
-.btn-orange {
-  margin-top: 20px;
-  color: $black-ponele;
-  background-color: $color-text-base;
-  border-color: $color-text-base;
-}
-.btn-orange:hover{
-  background-color: $background-color-button-orange-hover;
-  border-color: $background-color-button-orange-hover;
-}
 /* productos.html*/
 .advertencia-productos{
   background-color: $background-color-advertencia-productos;

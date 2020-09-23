@@ -58,9 +58,6 @@ $background-color-por-que-bastard-section-nosotros-tittle: #271124;
 
 
 // CLASES PRE-ARMADAS
-.b-button{
-    @include b-button;
-}
 .b-button-purple{
     @include b-button-purple;
     border: 2px solid b-button-opacity($color-text-base,.50);
