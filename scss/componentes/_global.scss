@@ -148,9 +148,33 @@ body {
 }    
 
 .contador-item{
-  height: 300px;
   background-color: $background-color-menu;
+  height: auto;
+  margin: 20px 0;
   width: 100%;
+    div{
+      color: $color-text-base;
+      font-size: 1.775rem;
+      padding: 20px;
+      text-align: center;
+    }
+}
+
+.ocultar-contador{
+  opacity:0;
+}
+
+.mostrar-contador{
+  animation: animar-contador 2.5s;
+}
+
+@keyframes animar-contador{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
 }
 
 .carousel-end{
