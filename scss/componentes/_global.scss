@@ -104,13 +104,20 @@ body {
       font-size: calc(3rem + 2vw);
   }
   @keyframes portada-titulo {
-      0% { opacity: 0;}
-      100% {opacity: 1;}
+    0% { opacity: 0;}
+    100% {opacity: 1;}
   }
   .portada-img{
-      height: 600px;
-      overflow: hidden;
-      width: 100%;
+    height: 600px;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .portada{
+    .portada-titulo.nosotros-tit{
+        transform: translate(4px, -320px);
+    }
   }
 }
 
@@ -280,33 +287,47 @@ body {
 
 /* nosotros.html*/
 
-.nosotros-main {
-  .nosotros-carousel{
-      margin: 35px 0;
-      .seccion-texto.nosotros {
-          background-color: $background-color-footer;
-          border: 1px #212529 solid;
-          border-radius: 25px;
-          padding: 15px;
-          text-align: center;
-          h2{color: $black-ponele;}
-          p{color:$color-text-footer-link}
-      }
+.about-us{
+  margin: 20px auto;
+  padding: 20px 0;
+}
+.text-about-us{
+  color: $color-text-base; //puto
+  padding-left: 60px;
+  h2{
+    border-bottom: 2px solid $color-text-menu-link-hoverandactive;
+    font-size: 1.8rem;
+    padding: 5px
   }
-  .seccion-end-nosotros{
-      .seccion-texto{
-          height: auto;
-          width: 60%;
-      }
+  h3{
+    color: $color-text-base;
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: bold;
+    padding: 5px;
+}
+  p{
+    color: $color-text-base-p;
+    font-size: 1rem;
+    padding: 5px
   }
 }
-@media (max-width: 768px) {
-  .nosotros-main{
-      .seccion-end-nosotros{
-          .seccion-texto{
-              width:90%;
-          }
-      }
+
+.text-about-us-cards{
+  @extend .text-about-us;
+  p{
+    padding-top: 20px;
+  }
+}
+.aboutus-cards{
+  background-color: $background-color-menu;
+  @extend .about-us;
+}
+
+.about-us-ceo{
+  .text-about-us{
+    padding-right: 50px;
+    padding-left: 30px;
   }
 }
 /*contacto.html*/ /*Te odio formulario*/

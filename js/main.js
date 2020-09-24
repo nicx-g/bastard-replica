@@ -1,3 +1,5 @@
+//GO TOP BUTTON Y MENU 
+
 window.onscroll = function(){
     if(document.documentElement.scrollTop > 700){
         document.querySelector('.go-top-container')
@@ -16,14 +18,8 @@ window.onscroll = function(){
         .classList.remove('menu-header-sticky');
     }
 }
-var $window = $(window);
 
-$(window).on('scroll', function() {
-    $topOffset = $(this).scrollTop();
- 
-    console.log($topOffset);
- 
-});
+//GO TOP BUTTON
 
 document.querySelector('.go-top-container').addEventListener('click', () => {
     window.scrollTo({
@@ -31,6 +27,8 @@ document.querySelector('.go-top-container').addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+// MENU
 
 window.onload = function(){
     const headerScroll = document.querySelector('.menu-header')
@@ -50,9 +48,11 @@ window.onload = function(){
     });
 }
 
+//Contador en index.html
+
 addEventListener('DOMContentLoaded', () => {
     const contadores = document.querySelectorAll('.contador-boxes')
-    const velocidad = 300
+    const velocidad = 225
 
     const animarContadores = () => {
         for (const contador of contadores){
