@@ -25,7 +25,13 @@ body {
   position: fixed;
   width: 3rem;
   z-index: -1;
-  .go-top-button{
+  @media (max-width: 600px) {
+    left:82%;
+  }
+  @media (max-width: 950px) and (min-width: 601px){
+    left: 90%;
+  }
+.go-top-button{
       cursor:pointer;
       background-color: $background-color-go-top;
       border-radius: 50%;
@@ -61,11 +67,7 @@ body {
       } 
   }
 }
-@media (max-width: 768px) {
-  .go-top-container{
-      left:85%;
-  }
-}
+
 @keyframes popup{
   0%{
       height: 0;
@@ -100,8 +102,11 @@ body {
       width: auto;
   }
   .portada-titulo.nosotros-tit{
-      transform: translate(400px, -320px);
-      font-size: calc(3rem + 2vw);
+    font-size: calc(3rem + 2vw);
+    transform: translate(400px, -320px);
+    @media (max-width: 768px){
+      transform: translate(4px, -320px)
+    }
   }
   @keyframes portada-titulo {
     0% { opacity: 0;}
@@ -113,14 +118,6 @@ body {
     width: 100%;
   }
 }
-@media (max-width: 768px) {
-  .portada{
-    .portada-titulo.nosotros-tit{
-        transform: translate(4px, -320px);
-    }
-  }
-}
-
 
 .seccion-texto{
   color: $color-text-base;
@@ -143,14 +140,14 @@ body {
 }
 .principal{
   span{
-      a{
-          font-style: italic;
-          color:$color-text-main-span;
+    a{
+      font-style: italic;
+      color:$color-text-main-span;
+      &:hover{
+        color: $background-color-footer;
+        text-decoration: none;
       }
-      a:hover{ 
-          color: $color-text-main-span-hover;
-          text-decoration: none;
-      }
+    }
   }    
 }    
 
@@ -207,16 +204,16 @@ body {
       margin: 15px 0;
       padding: 15px 0 0 0;
       a{
-          background-color: $background-color-advertencia-productos;
-          color: $color-text-base;
-          font-size: 1.325rem;
-          padding: 10px 0;
-          text-align:center;
-          text-decoration:none;
-      }
-      a:hover{
+        background-color: $background-color-advertencia-productos;
+        color: $color-text-base;
+        font-size: 1.325rem;
+        padding: 10px 0;
+        text-align:center;
+        text-decoration:none;
+        &:hover{
           background-color: $black-ponele;
           color: white;
+        }
       }
       div{
           border: 0;
@@ -244,16 +241,13 @@ body {
 .info-salud-end-container{
   margin: 40px auto;
   .seccion-texto{
-      margin: 0 20px;
-      width:60%;
-      
-  }
-}
-@media (max-width: 992px) {
-  .info-salud-end-container .seccion-texto{
+    margin: 0 20px;
+    width:60%;
+    @media (max-width: 992px) {
       margin: 0 20px;
       margin-top: 40px;
       width: 90%;
+    }
   }
 }
 
@@ -279,8 +273,10 @@ body {
   }
   .seccion-texto{
       margin: 60px 0;
-      h2{background-color: $background-color-por-que-bastard-section-nosotros-tittle;
-      font-size: 1.3rem}
+      h2{
+        background-color: $background-color-por-que-bastard-section-nosotros-tittle;
+        font-size: 1.3rem
+      }
       p{font-size: 1rem;}
   }
 }
@@ -295,7 +291,7 @@ body {
   color: $color-text-base; //puto
   padding-left: 60px;
   h2{
-    border-bottom: 2px solid $color-text-menu-link-hoverandactive;
+    border-bottom: 2px solid get-opacity($color-text-base,.78);
     font-size: 1.8rem;
     padding: 5px
   }
@@ -337,21 +333,16 @@ body {
   margin-bottom: 35px;
   label{display:none;}
   input{
-      display: block;
-      font-size: 1.125rem;
+      display: inline-block;
+      font-size: 1.175rem;
       padding: 10px;
       margin: 5px 0;
-      width: auto;
+  }
+  .formulario-datos-basicos{
+      input {display:block;}
   }
   .formulario-seleccion{
-      select{
-          display: inline-block;
-          margin: 20px 0;
-      }
-      input {
-          display: inline-block;
-          width: auto;
-      }
+      select{margin: 20px 0;}
   }
   .formulario-mensajeynewsletter{
       textarea{
@@ -359,20 +350,7 @@ body {
           font-family: 'poppins', sans-serif;
           width: 70%;
       }
-      input{
-          display:inline-block;
-          width: auto;
-      }
   } 
-  .formulario-botones{
-      input{
-        @include b-button-purple;      
-      }
-      input:hover{
-          color:$color-text-menu-link-hoverandactive;
-          padding: 15px;
-      }
-  }
 }
 
 /*gracias.html*/
@@ -393,10 +371,10 @@ body {
           font-size: 1.525rem;
           padding: 0 10px;
           text-decoration: none;
-      }
-      a:hover{
-          border-bottom: 3px solid #0f030e;
-          color: $color-section-gracias-hover;
+          &:hover{
+            border-bottom: 3px solid #0f030e;
+            color: $color-section-gracias-hover;
+          }
       }
   }
 }

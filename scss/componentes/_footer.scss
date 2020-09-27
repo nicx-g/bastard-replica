@@ -22,8 +22,8 @@
             color: $color-text-footer-link;
             font-size: 1.25rem;
             text-decoration: none;
+            &:hover{color: $color-text-footer-link-hover;}
         }
-        a:hover{color: $color-text-footer-link-hover;}
         i {margin-right: 5px;}
     }
   }

@@ -20,13 +20,13 @@
                padding: 12px 10px;
                text-decoration: none;
                transition: color 0.5s, border-bottom 0.2s;
-            }
-            a:hover{
+               &:hover{
                 border-bottom: 3px solid $color-text-base;
-                color:$color-text-menu-link-hoverandactive;
+                color:get-opacity($color-text-base,.85);
+               }
             }
             #active-link{
-            color:$color-text-menu-link-hoverandactive;
+            color:get-opacity($color-text-base,.85);
             border-bottom: 3px solid $color-text-base;
             }
         }

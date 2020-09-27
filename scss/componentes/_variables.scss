@@ -11,9 +11,7 @@ $font-size-base: 16px !default;
 $black-ponele: #333333;
 $color-text-base: #fda05e;
 $color-text-base-p: #fdb079;
-$color-text-menu-link-hoverandactive: #cc7742;
 $color-text-main-span: #ffbb8b;
-$color-text-main-span-hover: #f6e6b2;
 $color-text-footer-link: #452b11;
 $color-text-footer-link-hover: #bd7b52;
 $color-section-gracias: #2f152c;
@@ -26,7 +24,6 @@ $background-color-menu: #0e060d;
 $background-color-footer: #f6e6b2;
 $background-color-go-top: #e9c988;
 $background-color-portada-titulo: #00000069;
-$background-color-button-orange-hover: #b47040;
 $background-color-advertencia-productos: #4c364a;
 $background-color-por-que-bastard-section-nosotros-tittle: #271124;
 
@@ -39,20 +36,21 @@ $background-color-por-que-bastard-section-nosotros-tittle: #271124;
     border: 0;
     border-radius: 10px;
     display:inline-block;
-    font-family: 'poppins', sans-serif;
-    font-size: 1.175rem;
-    margin-top: 10px;
+    font:{
+        family: 'poppins', sans-serif;
+        size: 1.175rem;
+    }
+    margin: 10px auto;
     padding: 10px;
     text-decoration: none;
     transition: all .3s;
-    width: auto;
 }
 @mixin b-button-purple{
     background-color:$background-color-menu;
     color: $color-text-base;
     @include b-button;
 }
-@function b-button-opacity($color, $opacidad){
+@function get-opacity($color, $opacidad){
     @return rgba($color, $opacidad);
 }
 
@@ -60,10 +58,10 @@ $background-color-por-que-bastard-section-nosotros-tittle: #271124;
 // CLASES PRE-ARMADAS
 .b-button-purple{
     @include b-button-purple;
-    border: 2px solid b-button-opacity($color-text-base,.50);
-}
-.b-button-purple:hover{
-    color:$color-text-menu-link-hoverandactive;
-    border: 2px solid b-button-opacity($color-text-base,1);
-    text-decoration: none;
+    border: 2px solid $background-color-menu;
+    &:hover{
+        color: get-opacity($color-text-base,.78);
+        border: 2px solid $color-text-base;
+        text-decoration: none;
+    }
 }
