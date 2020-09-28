@@ -91,7 +91,7 @@ body {
   .portada-titulo{
       animation-duration: 2s;
       animation-name: portada-titulo;
-      background-color: $background-color-portada-titulo;
+      background-color: get-opacity(black, .5);
       color: $color-text-base;
       display: inline-block;
       font-family: $main-font-tittle;
@@ -133,7 +133,7 @@ body {
   }
 }
 
-/*index.html y sección final de la mayoríad de views*/
+/*index.html*/
 
 .main-section {
   div{margin: 20px 0;}
@@ -190,43 +190,54 @@ body {
   background-color: $background-color-advertencia-productos;
   color: $color-text-base;
   font-size: 1.525rem;
-  padding: 0 30px;
+  margin: 30px auto;
+  margin-top: 120px;
+  padding: 15px 30px;
   p{font-size: 1.125rem;}
-  h1{margin:0;}
+  h1{
+    margin:0;
+    margin-bottom: 30px;
+  }
 }
-
-.odio-grid{ /*cabe aclarar que le voy a cambiar el nombre a futuro jajajaja update: sigo odiando grid. me niego a cambiarle el nombre, aguante flexbox. update2: qué horrible que es esto man, me está agarrando un acv odio las grillas update3: me harté, por hoy, al final usé propiedades de flexbox, no puedo con las grillas*/
+ /*cabe aclarar que le voy a cambiar el nombre a futuro jajajaja update: sigo odiando grid. me niego a cambiarle el nombre, aguante flexbox. update2: qué horrible que es esto man, me está agarrando un acv odio las grillas update3: me harté, por hoy, al final usé propiedades de flexbox, no puedo con las grillas*/
+.odio-grid {
   background-color: $background-color-footer;
-  div{
-      border: 1px solid black;
-      border-radius: 10px;
-      overflow: hidden;
-      margin: 15px 0;
-      padding: 15px 0 0 0;
-      a{
-        background-color: $background-color-advertencia-productos;
-        color: $color-text-base;
-        font-size: 1.325rem;
-        padding: 10px 0;
-        text-align:center;
-        text-decoration:none;
-        &:hover{
-          background-color: $black-ponele;
-          color: white;
+    &-item{
+        border: 1px solid black;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 15px 0;
+        padding:0;
+        img{ width:100%;}
+        a{
+          background-color: $background-color-advertencia-productos;
+          color: $color-text-base;
+          display: inline-block;
+          font-size: 1.325rem;
+          padding: 10px 0;
+          text-align:center;
+          text-decoration:none;
+          width:100%;
+          &:hover{
+            background-color: $black-ponele;
+            color: white;
+          }
         }
       }
-      div{
+      &-text{
           border: 0;
           h2, p{
-              font-size: 1.325rem;
-              margin: 10px 0;
-              padding: 0;
-              text-align:center;
+          color: $black-ponele;
+          font-size: 1.325rem;
+          margin: 10px 0;
+          padding: 0;
+          text-align:center;
           }
+          h2{font-weight: bold;}
       }
-  }
-  i{padding-right: 8px;}
+    i{padding-right: 8px;}
 }
+
 
 
 .info-salud-content {
@@ -274,7 +285,7 @@ body {
   .seccion-texto{
       margin: 60px 0;
       h2{
-        background-color: $background-color-por-que-bastard-section-nosotros-tittle;
+        background-color: $background-color-advertencia-productos;
         font-size: 1.3rem
       }
       p{font-size: 1rem;}
@@ -367,13 +378,14 @@ body {
       padding: 0 10px;
       } 
       a{
-          color: $color-section-gracias;
+          color: $background-color-body;
           font-size: 1.525rem;
           padding: 0 10px;
           text-decoration: none;
+          transition: all .3s ease;
           &:hover{
-            border-bottom: 3px solid #0f030e;
-            color: $color-section-gracias-hover;
+            border-bottom: 3px solid $color-text-base;
+            color: $background-color-menu;
           }
       }
   }
