@@ -202,11 +202,12 @@ body {
  /*cabe aclarar que le voy a cambiar el nombre a futuro jajajaja update: sigo odiando grid. me niego a cambiarle el nombre, aguante flexbox. update2: qué horrible que es esto man, me está agarrando un acv odio las grillas update3: me harté, por hoy, al final usé propiedades de flexbox, no puedo con las grillas*/
 .odio-grid {
   background-color: $background-color-footer;
+  padding: 30px 0;
     &-item{
         border: 1px solid black;
         border-radius: 10px;
         overflow: hidden;
-        margin: 15px 0;
+        margin: 15px 20px;
         padding:0;
         img{ width:100%;}
         a{
