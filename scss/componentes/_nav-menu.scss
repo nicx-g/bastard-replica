@@ -9,6 +9,16 @@
     z-index: 10;
     nav {
         background-color: $background-color-menu;
+        a{
+            @media (max-width: 991px) and (min-width: 500px){
+                text-align:center;
+                width: 90%;
+            }
+            @media (max-width: 500px){
+                text-align:center;
+                width: 82%;
+            }
+        }
         ul li{
             height: 57px;
             list-style: none;
@@ -18,8 +28,15 @@
                font-size: 1.119rem;
                margin: 0 5px;
                padding: 12px 10px;
+               text-align: left;
                text-decoration: none;
                transition: color 0.5s, border-bottom 0.2s;
+               @media (max-width: 991px) {
+                   width: 40%;
+               }
+               @media (max-width: 550px){
+                   width: calc(74% - 2vw);
+               }
                &:hover{
                 border-bottom: 3px solid $color-text-base;
                 color:get-opacity($color-text-base,.85);
