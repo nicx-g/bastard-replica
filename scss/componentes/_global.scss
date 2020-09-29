@@ -305,7 +305,10 @@ body {
   h2{
     border-bottom: 2px solid get-opacity($color-text-base,.78);
     font-size: 1.8rem;
-    padding: 5px
+    padding: 5px;
+    @media (max-width:991px){
+      margin-top: 30px;
+    }
   }
   h3{
     color: $color-text-base;
@@ -349,7 +352,11 @@ body {
       font-size: 1.175rem;
       padding: 10px;
       margin: 5px 0;
+      @media (max-width:564px){
+      width:100%;
+      }
   }
+
   .formulario-datos-basicos{
       input {display:block;}
   }
@@ -361,6 +368,12 @@ body {
           display:block; 
           font-family: 'poppins', sans-serif;
           width: 70%;
+      }
+      input{
+        margin-right: 5px;
+        @media (max-width: 564px){
+          width: auto;
+        }
       }
   } 
 }
@@ -405,14 +418,13 @@ $height-hover: 48px*6.5;
   transition: all 1s;
   width: 120px;
   &:hover{
-    height: 312px;
+    height: auto;
     padding: 0 20px;
     width: 90%;    
   }
   &-item{
     position: relative;
     top: 0px;
-    transition: all .3s ease;
     &:hover{
       top: -25px;
     }

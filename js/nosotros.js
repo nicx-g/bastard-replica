@@ -6,7 +6,7 @@ const applyMatchMedia = mqk => {
     document.querySelector('.about-us-img2').classList.add('img-fluid'))
     :
     (document.querySelector('.about-us-img').classList.remove('img-fluid'),
-    document.querySelector('.about-us-img2').classList.remove('img.fluid'))
+    document.querySelector('.about-us-img2').classList.remove('img-fluid'))
 }
 
 addEventListener('resize', () => applyMatchMedia(mqk))
