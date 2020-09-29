@@ -9,27 +9,6 @@
     z-index: 10;
     nav {
         background-color: $background-color-menu;
-<<<<<<< HEAD
-        div{
-            width:calc(75% + 6vw);
-            ul li{
-                height: 57px;
-                list-style: none;
-                a{
-                   color: $color-text-base;
-                   display: block;
-                   font-size: 1.119rem;
-                   margin: 0 5px;
-                   padding: 12px 10px;
-                   text-decoration: none;
-                   transition: color 0.5s, border-bottom 0.2s;
-                   &:hover{
-                    border-bottom: 3px solid $color-text-base;
-                    color:get-opacity($color-text-base,.85);
-                   }
-                }
-                #active-link{
-=======
         a{
             @media (max-width: 991px) and (min-width: 500px){
                 text-align:center;
@@ -60,7 +39,6 @@
                }
                &:hover{
                 border-bottom: 3px solid $color-text-base;
->>>>>>> arreglos
                 color:get-opacity($color-text-base,.85);
                 border-bottom: 3px solid $color-text-base;
                 }
