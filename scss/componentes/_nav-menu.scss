@@ -1,5 +1,5 @@
 .menu-header{
-    background-color: $background-color-menu;
+    background-color: map-get($colors, color-menu);
     height: 96.66px;
     padding-top: 10px;
     position: fixed;
@@ -8,7 +8,7 @@
     width: 100%;
     z-index: 10;
     nav {
-        background-color: $background-color-menu;
+        background-color: map-get($colors, color-menu);
         a{
             @media (max-width: 991px) and (min-width: 500px){
                 text-align:center;
@@ -23,7 +23,7 @@
             height: 57px;
             list-style: none;
             a{
-               color: $color-text-base;
+               color: map-get($colors, primary);
                display: block;
                font-size: 1.119rem;
                margin: 0 5px;
@@ -38,14 +38,13 @@
                    width: calc(74% - 2vw);
                }
                &:hover{
-                border-bottom: 3px solid $color-text-base;
-                color:get-opacity($color-text-base,.85);
-                border-bottom: 3px solid $color-text-base;
+                border-bottom: 3px solid map-get($colors, primary);
+                color:get-opacity(map-get($colors, primary),.85);
                 }
             }
         }
         }
-    i{color:$color-text-base;}
+    i{color:map-get($colors, primary);}
 }
 .menu-header-sticky{
     height: 76.66px;

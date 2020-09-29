@@ -8,7 +8,7 @@
 } 
 /*Body, Menú de Navegación y Pie de Página*/
 body {
-  background-color: $background-color-body;
+  background-color: map-get($colors, secondary);
   padding: 0;
   margin: 96.66px 0 0 0;
   font-family: $main-font;
@@ -33,16 +33,17 @@ body {
   }
 .go-top-button{
       cursor:pointer;
-      background-color: $background-color-go-top;
+      background-color: darken($color: map-get($other-colors, white), $amount: 10);
       border-radius: 50%;
       left: 50%;
       height: 100%;
       top: 50%;
-      transition: .2;
+      transition: all .2s ease;
       width: 100%;
       z-index: -1;
+      &:hover{background-color: darken($color: map-get($other-colors, white), $amount: 15)}
       i{
-          color: $black-ponele;
+          color: map-get($other-colors, black);
           font-size: 3rem;
           left: 50%;
           position: absolute;
@@ -50,6 +51,7 @@ body {
           transform: translate(-50%, -50%) scale(0);
           transition: .2s;
       }
+    
   }
 }
 
@@ -92,7 +94,7 @@ body {
       animation-duration: 2s;
       animation-name: portada-titulo;
       background-color: get-opacity(black, .5);
-      color: $color-text-base;
+      color: map-get($colors, primary);
       display: inline-block;
       font-family: $main-font-tittle;
       font-size: calc(2rem + 2vw);
@@ -120,15 +122,15 @@ body {
 }
 
 .seccion-texto{
-  color: $color-text-base;
+  color: map-get($colors, primary);
   text-align: center;
   width: 330px;
   h2{
       font-size: 1.5rem;
       font-weight: bold;}
   p{ 
-      color: $color-text-base-p;
       font-size: 1rem;
+      color: lighten($color: map-get($colors, primary), $amount: 5);
       margin-top: 25px;
   }
 }
@@ -141,10 +143,11 @@ body {
 .principal{
   span{
     a{
+      color: lighten($color: map-get($colors, primary), $amount: 10);
       font-style: italic;
-      color:$color-text-main-span;
+      transition: all .3s ease;
       &:hover{
-        color: $background-color-footer;
+        color: map-get($other-colors, white);
         text-decoration: none;
       }
     }
@@ -152,12 +155,12 @@ body {
 }    
 
 .contador-item{
-  background-color: $background-color-menu;
+  background-color: map-get($colors, color-menu);
   height: auto;
   margin: 20px 0;
   width: 100%;
     div{
-      color: $color-text-base;
+      color: map-get($colors, primary);
       font-size: 1.775rem;
       padding: 20px;
       text-align: center;
@@ -184,11 +187,14 @@ body {
 .carousel-end{
   max-width: 400px;
 }
+.button-end{
+  margin: 30px auto;
+}
 
 /* productos.html*/
 .advertencia-productos{
-  background-color: $background-color-advertencia-productos;
-  color: $color-text-base;
+  background-color: map-get($other-colors, light-violet);
+  color: map-get($colors, primary);
   font-size: 1.525rem;
   margin: 30px auto;
   margin-top: 120px;
@@ -199,9 +205,9 @@ body {
     margin-bottom: 30px;
   }
 }
- /*cabe aclarar que le voy a cambiar el nombre a futuro jajajaja update: sigo odiando grid. me niego a cambiarle el nombre, aguante flexbox. update2: qué horrible que es esto man, me está agarrando un acv odio las grillas update3: me harté, por hoy, al final usé propiedades de flexbox, no puedo con las grillas*/
+ 
 .odio-grid {
-  background-color: $background-color-footer;
+  background-color: map-get($other-colors, white);
   padding: 30px 0;
     &-item{
         border: 1px solid black;
@@ -211,24 +217,15 @@ body {
         padding:0;
         img{ width:100%;}
         a{
-          background-color: $background-color-advertencia-productos;
-          color: $color-text-base;
-          display: inline-block;
-          font-size: 1.325rem;
-          padding: 10px 0;
-          text-align:center;
-          text-decoration:none;
+          border-radius: 0;
+          margin-top: 10px;
           width:100%;
-          &:hover{
-            background-color: $black-ponele;
-            color: white;
-          }
         }
       }
       &-text{
           border: 0;
           h2, p{
-          color: $black-ponele;
+          color: map-get($other-colors, black);
           font-size: 1.325rem;
           margin: 10px 0;
           padding: 0;
@@ -239,7 +236,7 @@ body {
     i{padding-right: 8px;}
 }
 
-
+/* info salud */
 
 .info-salud-content {
   margin: 40px auto;
@@ -286,7 +283,7 @@ body {
   .seccion-texto{
       margin: 60px 0;
       h2{
-        background-color: $background-color-advertencia-productos;
+        background-color: map-get($other-colors, light-violet);
         font-size: 1.3rem
       }
       p{font-size: 1rem;}
@@ -299,11 +296,24 @@ body {
   margin: 20px auto;
   padding: 20px 0;
 }
+
+.aboutus-cards{
+  background-color: map-get($colors, color-menu);
+  @extend .about-us;
+}
+
+.about-us-ceo{
+  .text-about-us{
+    padding-right: 50px;
+    padding-left: 30px;
+  }
+}
+
 .text-about-us{
-  color: $color-text-base; //puto
+  color: map-get($colors, primary);
   padding-left: 60px;
   h2{
-    border-bottom: 2px solid get-opacity($color-text-base,.78);
+    border-bottom: 2px solid get-opacity(map-get($colors, primary),.78);
     font-size: 1.8rem;
     padding: 5px;
     @media (max-width:991px){
@@ -311,14 +321,14 @@ body {
     }
   }
   h3{
-    color: $color-text-base;
+    color: map-get($colors, primary);
     font-size: 1.4rem;
     font-style: italic;
     font-weight: bold;
     padding: 5px;
 }
   p{
-    color: $color-text-base-p;
+    color: lighten($color: map-get($colors, primary), $amount: 5);
     font-size: 1rem;
     padding: 5px
   }
@@ -330,21 +340,11 @@ body {
     padding-top: 20px;
   }
 }
-.aboutus-cards{
-  background-color: $background-color-menu;
-  @extend .about-us;
-}
 
-.about-us-ceo{
-  .text-about-us{
-    padding-right: 50px;
-    padding-left: 30px;
-  }
-}
 /*contacto.html*/ /*Te odio formulario*/
 
 .formulario {
-  background-color: $background-color-footer;
+  background-color: map-get($other-colors, white);
   margin-bottom: 35px;
   label{display:none;}
   input{
@@ -381,7 +381,7 @@ body {
 /*gracias.html*/
 
 .seccion-gracias{
-  background-color: $background-color-footer;
+  background-color: map-get($other-colors, white);
   margin: 80px auto;
   margin-top: 140px;
   padding: 20px 10px;
@@ -392,14 +392,14 @@ body {
       padding: 0 10px;
       } 
       a{
-          color: $background-color-body;
+          color: map-get($colors, secondary );
           font-size: 1.525rem;
           padding: 0 10px;
           text-decoration: none;
           transition: all .3s ease;
           &:hover{
-            border-bottom: 3px solid $color-text-base;
-            color: $background-color-menu;
+            border-bottom: 3px solid map-get($colors, primary);
+            color: map-get($colors, color-menu);
           }
       }
   }
@@ -408,7 +408,7 @@ body {
 $height-hover: 48px*6.5;
 
 #futuro-popup{
-  background-color: $background-color-footer;
+  background-color: map-get($other-colors, white);
   font-size: 0.946rem;
   height: 48px;
   margin:0;
