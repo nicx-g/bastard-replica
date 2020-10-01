@@ -22,7 +22,8 @@ $other-colors: (
 
 //Mixins
 
-@mixin b-button {
+@mixin b-button($b-colors...) {
+    .b-button{
     border: 0;
     border-radius: 10px;
     display:inline-block;
@@ -34,11 +35,17 @@ $other-colors: (
     text-align: center;
     text-decoration: none;
     transition: all .3s;
-}
-@mixin b-button-purple{
-    background-color:map-get($colors, color-menu);
-    color: map-get($colors, primary);
-    @include b-button;
+    &-#{nth($b-colors, 1)}{
+        background-color: map-get($colors,nth($b-colors, 1));
+    }
+    @if length($b-colors) > 1 {
+        @for $i from 2 through length($b-colors) {
+            &-#{nth($b-colors, $i)} {
+                background-color: map-get($colors,nth($b-colors, $i));
+            }
+        }
+    }
+    }
 }
 
 //Funciones
@@ -48,9 +55,12 @@ $other-colors: (
 
 
 // Clases pre armadas
-.b-button-purple{
-    @include b-button-purple;
+
+@include b-button(map-keys($colors)...);
+
+.b-button-color-menu{
     border: 2px solid map-get($colors, color-menu);
+    color: map-get($colors, primary);
     &:hover{
         color: lighten($color: map-get($colors, primary), $amount: 5);
         border: 2px solid map-get($colors, primary);

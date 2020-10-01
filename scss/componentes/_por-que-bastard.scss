@@ -1,0 +1,29 @@
+.por-que-bastard-main{
+    margin: 90px auto;
+    .por-que-bastard-img{
+        animation-name: por-que-bastard-img;
+        animation-duration: 18s;
+        animation-iteration-count: infinite;
+        background-image: url("../resources/images/veo-que-hago.jpg");
+        background-position: 60% 40%;
+        height:1000px;
+        overflow: hidden;
+        width: 50%;
+    }
+    @keyframes por-que-bastard-img{
+        0%{background-position: 60% 35%;
+        }
+        50%{background-position: 40% 50%;
+        }
+        100%{background-position: 60% 35%;}
+    }
+    .seccion-texto{
+        margin: 60px 0;
+        h2{
+          background-color: map-get($other-colors, light-violet);
+          font-size: 1.3rem
+        }
+        p{font-size: 1rem;}
+    }
+  }
+  

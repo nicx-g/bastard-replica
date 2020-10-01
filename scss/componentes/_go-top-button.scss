@@ -1,0 +1,70 @@
+
+.go-top-container{
+  display: none;
+  bottom: 2%;
+  height: 3rem;
+  left: 93%;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: 3rem;
+  z-index: -1;
+  @media (max-width: 600px) {
+    left:82%;
+  }
+  @media (max-width: 950px) and (min-width: 601px){
+    left: 90%;
+  }
+.go-top-button{
+      cursor:pointer;
+      background-color: darken($color: map-get($other-colors, white), $amount: 10);
+      border-radius: 50%;
+      left: 50%;
+      height: 100%;
+      top: 50%;
+      transition: all .2s ease;
+      width: 100%;
+      z-index: -1;
+      &:hover{background-color: darken($color: map-get($other-colors, white), $amount: 15)}
+      i{
+          color: map-get($other-colors, black);
+          font-size: 3rem;
+          left: 50%;
+          position: absolute;
+          top: 48%;
+          transform: translate(-50%, -50%) scale(0);
+          transition: .2s;
+      }
+    
+  }
+}
+
+.show{
+  z-index: 10;
+  display: inline-block;
+  .go-top-button{
+      animation: popup .3s ease-in-out;
+      height: 3rem;
+      width: 3rem;
+      z-index: 11;
+      display: inline-block;
+      i{
+          transform: translate(-50%, -50%) scale(1); 
+      } 
+  }
+}
+
+@keyframes popup{
+  0%{
+      height: 0;
+      width: 0;
+  }
+  50%{
+      height: 5rem;
+      width: 5rem;
+  }
+  100%{
+      height: 3rem;
+      width: 3rem;
+  }
+}

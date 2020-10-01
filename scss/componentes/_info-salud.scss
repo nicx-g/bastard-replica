@@ -1,0 +1,21 @@
+.info-salud-content {
+    margin: 40px auto;
+    .seccion-texto{
+        margin-top: 25px;
+        text-align: justify;
+    }
+  }
+  
+  
+  .info-salud-end-container{
+    margin: 40px auto;
+    .seccion-texto{
+      margin: 0 20px;
+      width:60%;
+      @media (max-width: 992px) {
+        margin: 0 20px;
+        margin-top: 40px;
+        width: 90%;
+      }
+    }
+  }

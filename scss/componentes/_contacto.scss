@@ -1,0 +1,34 @@
+.formulario {
+  background-color: map-get($other-colors, white);
+  margin-bottom: 35px;
+  label{display:none;}
+  input{
+      display: inline-block;
+      font-size: 1.175rem;
+      padding: 10px;
+      margin: 5px 0;
+      @media (max-width:564px){
+      width:100%;
+      }
+  }
+
+  .formulario-datos-basicos{
+      input {display:block;}
+  }
+  .formulario-seleccion{
+      select{margin: 20px 0;}
+  }
+  .formulario-mensajeynewsletter{
+      textarea{
+          display:block; 
+          font-family: 'poppins', sans-serif;
+          width: 70%;
+      }
+      input{
+        margin-right: 5px;
+        @media (max-width: 564px){
+          width: auto;
+        }
+      }
+  } 
+}

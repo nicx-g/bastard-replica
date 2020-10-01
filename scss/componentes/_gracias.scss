@@ -1,0 +1,26 @@
+/*gracias.html*/
+
+.seccion-gracias{
+  background-color: map-get($other-colors, white);
+  margin: 80px auto;
+  margin-top: 140px;
+  padding: 20px 10px;
+  .seccion-gracias-texto-sec{
+      h2{
+      font-size: 1.525rem;
+      margin: 30px 0;
+      padding: 0 10px;
+      } 
+      a{
+          color: map-get($colors, secondary );
+          font-size: 1.525rem;
+          padding: 0 10px;
+          text-decoration: none;
+          transition: all .3s ease;
+          &:hover{
+            border-bottom: 3px solid map-get($colors, primary);
+            color: map-get($colors, color-menu);
+          }
+      }
+  }
+}

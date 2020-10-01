@@ -1,0 +1,43 @@
+.advertencia-productos{
+  background-color: map-get($other-colors, light-violet);
+  color: map-get($colors, primary);
+  font-size: 1.525rem;
+  margin: 30px auto;
+  margin-top: 120px;
+  padding: 15px 30px;
+  p{font-size: 1.125rem;}
+  h1{
+    margin:0;
+    margin-bottom: 30px;
+  }
+}
+ 
+.odio-grid {
+  background-color: map-get($other-colors, white);
+  padding: 30px 0;
+    &-item{
+        border: 1px solid black;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 15px 20px;
+        padding:0;
+        img{ width:100%;}
+        a{
+          border-radius: 0;
+          margin-top: 10px;
+          width:100%;
+        }
+      }
+      &-text{
+          border: 0;
+          h2, p{
+          color: map-get($other-colors, black);
+          font-size: 1.325rem;
+          margin: 10px 0;
+          padding: 0;
+          text-align:center;
+          }
+          h2{font-weight: bold;}
+      }
+    i{padding-right: 8px;}
+}

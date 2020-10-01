@@ -1,0 +1,51 @@
+
+/* nosotros.html*/
+
+.about-us{
+  margin: 20px auto;
+  padding: 20px 0;
+}
+
+.aboutus-cards{
+  background-color: map-get($colors, color-menu);
+  @extend .about-us;
+}
+
+.about-us-ceo{
+  .text-about-us{
+    padding-right: 50px;
+    padding-left: 30px;
+  }
+}
+
+.text-about-us{
+  color: map-get($colors, primary);
+  padding-left: 60px;
+  h2{
+    border-bottom: 2px solid get-opacity(map-get($colors, primary),.78);
+    font-size: 1.8rem;
+    padding: 5px;
+    @media (max-width:991px){
+      margin-top: 30px;
+    }
+  }
+  h3{
+    color: map-get($colors, primary);
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: bold;
+    padding: 5px;
+}
+  p{
+    color: lighten($color: map-get($colors, primary), $amount: 5);
+    font-size: 1rem;
+    padding: 5px
+  }
+}
+
+.text-about-us-cards{
+  @extend .text-about-us;
+  p{
+    padding-top: 20px;
+  }
+}

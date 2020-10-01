@@ -29,4 +29,33 @@
     }
   }
   
+  .footer-copyright{
+      margin-top: 20px;
+      p:before{
+        display: inline-block;
+        width: 20%;
+        content: " ";
+        border: 1px solid #c5a47e;
+        transform: translateY(-4px);
+        @media (max-width: 530px){
+            width: 7%;
+        }
+      }
+      
+      p{
+          display: block;
+          margin: 0 auto;
+          text-align: center;
+        }
+      p:after{
+        display: inline-block;
+        width: 20%;
+        content: " ";
+        border: 1px solid #c5a47e;
+        transform: translateY(-4px);
+        @media (max-width: 530px){
+            width: 7%;
+        }
+        }
+  }
   
