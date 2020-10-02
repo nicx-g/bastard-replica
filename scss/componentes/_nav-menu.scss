@@ -52,4 +52,9 @@
     transition: all .5s ease;
     z-index:10;
 }
+
+#active-link{
+    border-bottom: 3px solid map-get($colors, primary);
+    color:get-opacity(map-get($colors, primary),.85);
+}
   
