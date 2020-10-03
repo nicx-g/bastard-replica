@@ -12,9 +12,10 @@
 /* Body */
 body {
   background-color: map-get($colors, secondary);
-  padding: 0;
-  margin: 96.66px 0 0 0;
   font-family: $main-font;
+  margin: 96.66px 0 0 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 /* propiedades globales del sitio */
@@ -67,3 +68,68 @@ body {
   }
 }
 
+// preloader
+
+.preloader-container{
+  align-items: center;
+  background-color: map-get($colors, secondary);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top:0;
+  transition: all .3s ease;
+  width: 100%;
+  z-index: 99999;
+  span{
+    i{
+      color: map-get($map: $colors, $key:primary);
+      font-size: 2rem;
+      margin: 0;
+      margin-top: 60px;
+      padding: 10px;
+      transition: all .3s ease;
+    }
+  }
+  .cubo1{
+    animation: subicubito1 1s infinite;
+  }
+  .cubo2{
+    animation: subicubito2 1s infinite;
+  }
+  .cubo3{
+    animation: subicubito3 1s infinite;
+  }
+  .preloader-item{
+    animation: dateunavueltita 1s infinite;
+    border: 15px solid map-get($map: $colors, $key: primary);
+    border-radius: 100%;
+    border-top: map-get($map:$colors , $key: color-menu) 15px groove;
+    height: 100px;
+    transition: all .3s ease;
+    width: 100px;
+  }
+}
+
+@keyframes dateunavueltita{
+  0% {transform: rotate(0deg)};
+  100% {transform: rotate(360deg)};
+}
+
+@keyframes subicubito1{
+  1%{transform: translateY(-30px);}
+  100%{transform: translateY(0)}
+}
+@keyframes subicubito2{
+  33%{transform: translateY(-30px);}
+  100%{transform: translateY(0)}
+}
+@keyframes subicubito3{
+  66%{transform: translateY(-30px);}
+  100%{transform: translateY(0)}
+}

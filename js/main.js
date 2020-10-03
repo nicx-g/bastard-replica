@@ -32,6 +32,15 @@ document.querySelector('.go-top-container').addEventListener('click', () => {
 // MENU
 
 window.onload = function(){
+
+    // preloader
+    var preloaderScreen = document.querySelector('.preloader-container');
+    var bodyscreen = document.body;
+
+    preloaderScreen.style.display = 'none';
+    bodyscreen.style.overflow = 'visible';
+
+    //menu
     const headerScroll = document.querySelector('.menu-header');
     let scrollPos = 0;
     
@@ -92,3 +101,6 @@ addEventListener('DOMContentLoaded', () => {
         observer.observe(elementoHTML);
     });
 });
+
+// Pre loader
+
