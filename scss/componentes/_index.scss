@@ -51,28 +51,3 @@
   .button-end{
     margin: 30px auto;
   }
-
-  
-#futuro-popup{
-  background-color: map-get($other-colors, white);
-  font-size: 0.946rem;
-  height: 48px;
-  margin:0;
-  overflow: hidden;
-  padding: 0 10px;
-  transform: translate(0, 50px);
-  transition: all 1s;
-  width: 120px;
-  &:hover{
-    height: auto;
-    padding: 0 20px;
-    width: 90%;    
-  }
-  &-item{
-    position: relative;
-    top: 0px;
-    &:hover{
-      top: -25px;
-    }
-  }
-}
